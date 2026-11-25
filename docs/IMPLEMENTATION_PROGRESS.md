@@ -3,26 +3,22 @@
 **Updated:** 25 November 2026  
 **Branch:** `feature/website-design-system`
 
-## Current milestone: homepage sections
+## Current milestone: homepage foundation and feature storytelling
 
-The homepage foundation, Hold preview and seven-stage product-cycle section now exist in source control. This is implementation progress, not a verified release: the Astro build and browser behaviour have not yet been tested.
+Initial homepage sections are committed to the website branch. This is implementation progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not been tested in this environment.
 
 ### Implemented in source control
 
-- Global CSS tokens for the approved forest-green identity.
-- System-preference dark and light theme values.
-- Display and body font stacks with local system fallbacks; no third-party font request.
-- Shared Astro document layout and metadata defaults.
-- Skip link and shared site footer.
-- Responsive site header with desktop links and a native disclosure-based mobile menu.
-- Homepage hero with CSS-generated concentric light, emerald illumination and a subtle horizon arc.
-- Privacy-first interactive Hold demonstration with ready, running, complete and early-ended states; 10-second timer; restart and return actions; privacy boundary note.
-- Seven-stage Nūr approach section: PROTECT, RESIST, RECOVER, REBUILD, LIVE, LEARN and ADAPT.
-- Non-linear cycle framing, responsive cards, reduced-motion-compatible static presentation and explicit product-availability boundary.
-- Initial feature overview and user-controlled growth statement.
-- Reduced-motion handling, focus-visible styles and responsive layouts.
+- Global CSS tokens for the approved forest-green identity and system-preference themes.
+- Shared Astro document layout, metadata defaults, skip link, header and footer.
+- Responsive navigation and homepage hero with CSS-generated concentric light, emerald illumination and horizon arc.
+- Privacy-first interactive Hold demonstration with ready, running, complete and early-ended states.
+- Seven-stage product philosophy section: PROTECT, RESIST, RECOVER, REBUILD, LIVE, LEARN and ADAPT.
+- Six-card feature grid: Nūr Shield, Focus, Reset & Recovery, Insights & Growth, Accountability and optional Islamic Mode.
+- Qualified product copy based on the inspected app implementation evidence.
+- Responsive card layouts, reduced-motion handling and visible focus styling.
 
-### Files added or updated
+### Website source files
 
 - `src/styles/global.css`
 - `src/layouts/BaseLayout.astro`
@@ -30,37 +26,41 @@ The homepage foundation, Hold preview and seven-stage product-cycle section now 
 - `src/components/home/HeroSection.astro`
 - `src/components/home/HoldDemo.astro`
 - `src/components/home/ProductLoop.astro`
+- `src/components/home/FeatureGrid.astro`
 - `src/pages/index.astro`
+
+### Documentation updated
+
 - `docs/COMPONENT_ARCHITECTURE.md`
 - `docs/HOW_NUR_WORKS_SPEC.md`
+- `docs/FEATURES_SECTION_SPEC.md`
 - `docs/IMPLEMENTATION_PROGRESS.md`
 
-### Deliberately not implemented yet
+### Deliberately not implemented
 
 - Closed-alpha registration or waitlist submission.
 - Analytics, cookies, trackers or third-party scripts.
-- App screenshots or fabricated product UI.
-- Live protection, account or app-user integrations.
-- Full feature, privacy, FAQ, about, legal or support pages.
-- Hosting, domain configuration or public deployment.
-
-The homepage uses explanatory navigation rather than a non-functional alpha signup. The product-cycle section explains the intended framework; it does not claim all seven stages are implemented app features.
+- Fabricated app screenshots, testimonials or metrics.
+- Live app-user integrations or app data access.
+- Public deployment, domain configuration or hosting.
+- Claims that protection is unbreakable, accountability is fully verified, or insights are comprehensive.
 
 ## Verification status
 
 | Check | Status |
 |---|---|
-| Homepage source committed to GitHub | Complete |
-| Product-cycle component committed | Complete |
-| Source files re-fetched from GitHub | Pending final verification |
+| Homepage and feature source committed | Complete |
+| Source readback from GitHub | Pending final verification |
+| App evidence reviewed for feature claims | Complete (static source/docs review) |
+| App tests run in this task | No |
 | Astro production build | Not run |
 | Type checking | Not run |
-| Accessibility audit | Not run |
+| Accessibility/contrast audit | Not run |
 | Real-device visual review | Not run |
 | Deployment | Not configured |
 
 ## Integration note
 
-The pre-existing local Astro scaffold is still on the user's PC and has not yet been reconciled with this branch. Before merging or deploying, inspect its Git status, package files, Astro configuration, existing source files and tests. Preserve local work; do not reset or overwrite it.
+The user's existing local Astro scaffold remains on their PC and has not been reconciled with this branch. Before merging or deploying, inspect local Git status, package files, Astro configuration, source files and tests. Preserve local work; do not reset or overwrite it.
 
-A successful build and browser review are required before describing the website as working.
+A successful production build and browser review are required before describing the website as working.
