@@ -6,6 +6,7 @@ import ProductLoop from "../components/home/ProductLoop.astro";
 import FeatureGrid from "../components/home/FeatureGrid.astro";
 import PrivacyTrust from "../components/home/PrivacyTrust.astro";
 import LimitsPreview from "../components/home/LimitsPreview.astro";
+import AboutPreview from "../components/home/AboutPreview.astro";
 ---
 <BaseLayout>
   <HeroSection />
@@ -19,21 +20,6 @@ import LimitsPreview from "../components/home/LimitsPreview.astro";
 
   <LimitsPreview />
 
-  <section id="our-approach" class="approach-section section">
-    <div class="container approach-inner">
-      <p class="eyebrow">GROWTH, ON YOUR TERMS</p>
-      <h2 class="display-heading">Progress without pressure.</h2>
-      <p>Nūr is designed around privacy, honest support and user-controlled growth. It should help you make choices—not make choices for you.</p>
-      <a class="text-link" href="#how-it-works">Explore the Nūr approach <span aria-hidden="true">↗</span></a>
-    </div>
-  </section>
+  <AboutPreview />
 </BaseLayout>
 
-<style>
-  .approach-section { text-align: center; }
-  .approach-inner { max-width: 760px; }
-  .approach-inner h2 { margin: 1rem 0 0; font-size: clamp(2.4rem, 5vw, 4.25rem); }
-  .approach-inner > p:not(.eyebrow) { max-width: 620px; margin: 1.25rem auto; color: var(--color-text-muted); font-size: 1.05rem; }
-  .text-link { display: inline-flex; gap: .5rem; margin-top: 1rem; color: var(--color-accent); font-size: .9rem; font-weight: 700; text-decoration: none; }
-  .text-link:hover { text-decoration: underline; text-underline-offset: .25rem; }
-</style>
