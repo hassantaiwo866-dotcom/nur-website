@@ -1,6 +1,6 @@
 # Nūr Website — Component Architecture Specification
 
-**Status:** Proposed component and code-organisation plan; not implemented
+**Status:** Architecture specification; initial homepage foundation partially implemented
 **Date:** 25 November 2026
 **Repository:** `hassantaiwo866-dotcom/nur-website`
 **Working branch:** `feature/website-design-system`
@@ -13,7 +13,7 @@
 
 Define reusable Astro components, layouts, page composition, styling boundaries and interaction ownership before implementation.
 
-This is a component architecture, not source code. The GitHub branch currently contains specifications only. The local Astro scaffold must be inspected and reconciled before these proposed paths are created.
+This document began as a component architecture specification. Initial Astro page, layout, header, hero and global stylesheet files have since been added on this branch. The existing local Astro scaffold still must be inspected and reconciled before these files are merged into the local working copy or deployed.
 
 ## 2. Architecture principles
 
