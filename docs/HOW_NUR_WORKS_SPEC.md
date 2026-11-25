@@ -1,6 +1,6 @@
 # Nūr Website — How Nūr Works Section
 
-**Status:** Initial homepage implementation committed; build and browser verification pending  
+**Status:** Homepage section and standalone How Nūr Works page committed; build and browser verification pending  
 **Date:** 25 November 2026  
 **Branch:** `feature/website-design-system`
 
@@ -85,3 +85,19 @@ Do not make religious rulings, present AI as a Qur'an authority, or imply that u
 ## 9. Implementation status
 
 Initial implementation is in `src/components/home/ProductLoop.astro`, imported by `src/pages/index.astro` immediately after the Hold demonstration. The source has been committed to `feature/website-design-system`. Build, accessibility and device verification remain pending.
+
+
+## 10. Standalone page implementation record
+
+The full page is implemented at `src/pages/how-it-works.astro` using the shared `BaseLayout.astro`. It includes:
+- A dedicated introduction and a responsive seven-part cycle motif.
+- Seven detailed stage explanations with reflective prompts.
+- A clear distinction between the guiding framework, current app foundations and capabilities not yet verified.
+- Explicit boundaries for outcomes, medical claims, religious authority and optional Islamic Mode.
+- Links back to the homepage's closed-alpha status and feature overview.
+
+The page is static and does not collect, store or transmit visitor information. The cycle illustration is decorative; the stage explanations remain available as normal page content without JavaScript.
+
+The shared header now links to `/how-it-works/`. Homepage section links in the header and footer use root-relative paths so they continue to work from this secondary page.
+
+**Verification pending:** Astro production build, direct route response, browser rendering, keyboard/screen-reader review, responsive layout review and representative Android visual review.
