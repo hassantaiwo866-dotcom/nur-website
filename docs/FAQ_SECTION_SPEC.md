@@ -1,6 +1,6 @@
 # Nūr Website — FAQ Section Specification
 
-**Status:** Proposed public copy and publication requirements; not implemented
+**Status:** Six-question homepage FAQ implemented; full FAQ page and verification pending
 **Date:** 25 November 2026
 **Website branch:** `feature/website-design-system`
 **App implementation baseline:** `integration/alpha-readiness` at `055d9cc5d3e8fa0f7bd87fa0fe8defdb819ef9fc`
@@ -201,3 +201,22 @@ If an answer cannot be verified, remove it, qualify it or say that the feature i
 ---
 
 **Implementation boundary:** This document defines FAQ content and behaviour only. It does not implement the website, app features, support channel, waitlist, analytics configuration or legal review.
+
+
+## 8. Homepage implementation record
+
+The homepage FAQ is implemented in `src/components/home/FAQPreview.astro` and rendered from `src/pages/index.astro`. The site header includes an FAQ anchor link.
+
+The six homepage questions cover:
+1. What Nūr is.
+2. Protection limitations.
+3. Local and online data storage.
+4. Accountability and browsing-history boundaries.
+5. Optional Islamic Mode.
+6. Current download/alpha availability.
+
+The component uses native `details` and `summary` disclosures. Multiple answers can remain open; answers are in the HTML and do not require JavaScript. Keyboard focus is visible and reduced-motion preferences are respected.
+
+The availability answer explicitly says the product is still being developed and that no active registration form or confirmed release date is offered on this page.
+
+**Verification pending:** Astro build, rendered browser behaviour, keyboard/screen-reader review, contrast and tap-target checks, and final claim review against the public release. The full FAQ page and remaining detailed questions are not implemented.
