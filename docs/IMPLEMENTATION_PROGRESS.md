@@ -5,12 +5,12 @@
 
 ## Current milestone: homepage foundation and core trust content
 
-Initial homepage sections are committed to this branch. This is source-control progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not yet been tested.
+Initial homepage sections and shared layout source are committed to this branch. This is source-control progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not yet been tested.
 
 ### Implemented in source control
 
 - Global CSS tokens for the approved forest-green identity and system-preference themes.
-- Shared Astro document layout, metadata defaults, skip link, header and footer.
+- Shared Astro document layout, metadata defaults, skip link, header and responsive footer.
 - Responsive navigation and homepage hero with CSS-generated concentric light, emerald illumination and horizon arc.
 - Privacy-first interactive Hold demonstration with ready, running, complete and early-ended states.
 - Seven-stage product philosophy section: PROTECT, RESIST, RECOVER, REBUILD, LIVE, LEARN and ADAPT.
@@ -19,6 +19,8 @@ Initial homepage sections are committed to this branch. This is source-control p
 - What Nūr Cannot Do preview: six concise boundary cards covering protection, user agency, recovery, Islamic Mode, privacy/accountability and AI/real-world support.
 - About Nūr preview: purpose, six-stage guiding framework, non-shaming product principles and an honest development-status note.
 - Homepage FAQ: six questions covering product purpose, protection limits, data storage, accountability, Islamic Mode and current availability. Uses native HTML disclosures.
+- Final homepage callout states that Nūr is in development and closed-alpha applications are not open. Its link leads to the existing How Nūr Works section; it does not collect data.
+- Responsive footer groups links into Explore, Trust and Availability, linking only to existing homepage anchors.
 - Product claims qualified against inspected app source and privacy inventory.
 - Responsive layouts, reduced-motion handling and visible focus styling.
 
@@ -35,11 +37,14 @@ Initial homepage sections are committed to this branch. This is source-control p
 - `src/components/home/LimitsPreview.astro`
 - `src/components/home/AboutPreview.astro`
 - `src/components/home/FAQPreview.astro`
+- `src/components/home/AlphaCallout.astro`
 - `src/pages/index.astro`
 
 ### Documentation updated
 
 - `docs/COMPONENT_ARCHITECTURE.md`
+- `docs/INFORMATION_ARCHITECTURE.md`
+- `docs/CLOSED_ALPHA_ACCESS_SPEC.md`
 - `docs/HOW_NUR_WORKS_SPEC.md`
 - `docs/FEATURES_SECTION_SPEC.md`
 - `docs/PRIVACY_TRUST_SECTION_SPEC.md`
@@ -54,6 +59,7 @@ Initial homepage sections are committed to this branch. This is source-control p
 - Analytics, cookies, trackers or third-party scripts.
 - Fabricated app screenshots, testimonials or metrics.
 - Live app-user integrations or app data access.
+- Legal pages, support contact or data-request service.
 - Public deployment, domain configuration or hosting.
 - Claims that protection is unbreakable, accountability is fully verified, export/deletion is complete or insights are comprehensive.
 
@@ -61,13 +67,12 @@ Initial homepage sections are committed to this branch. This is source-control p
 
 | Check | Status |
 |---|---|
-| Homepage source committed | Complete |
-| Privacy section source committed | Complete |
-| Limitations preview source committed | Complete |
-| About preview source committed | Complete |
-| Homepage FAQ source committed | Complete |
+| Homepage sections committed | Complete |
+| Closed-alpha status callout committed | Complete |
+| Responsive footer source committed | Complete |
+| Footer and CTA destinations checked against current homepage IDs | Complete (source review) |
 | Documentation updated | Complete |
-| GitHub readback | Complete for current changes |
+| GitHub source readback | Complete |
 | App privacy source/docs reviewed | Complete (static source review) |
 | App tests run in this task | No |
 | Astro production build | Not run |
