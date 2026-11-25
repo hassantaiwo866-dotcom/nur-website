@@ -1,0 +1,227 @@
+---
+---
+<section class="hold-section" aria-labelledby="hold-title">
+  <div class="container hold-layout">
+    <div class="hold-copy">
+      <p class="eyebrow">A MOMENT TO CHOOSE</p>
+      <h2 id="hold-title" class="display-heading">You don't have to react to every urge.</h2>
+      <p class="hold-lead">Create a little space between what you feel and what you do next. No judgement. No perfect response required.</p>
+      <p class="hold-preview-label">AN INTERACTIVE 10-SECOND PREVIEW</p>
+    </div>
+
+    <div class="hold-card glass-panel" data-hold-demo>
+      <div class="hold-state" data-state="ready">
+        <div class="hold-orbit" aria-hidden="true">
+          <span class="orbit-ring orbit-ring-outer"></span>
+          <span class="orbit-ring orbit-ring-inner"></span>
+          <span class="orbit-centre"></span>
+        </div>
+        <h3>Take a moment before the next move.</h3>
+        <p>Sometimes a small pause is enough to help you notice what is happening and choose what comes next.</p>
+        <button class="button hold-primary" type="button" data-start>Begin a 10-second pause <span aria-hidden="true">→</span></button>
+        <a class="hold-skip" href="#how-it-works">Skip this and explore Nūr</a>
+      </div>
+
+      <div class="hold-state" data-state="running" hidden>
+        <div class="timer-wrap" aria-hidden="true">
+          <svg class="timer-ring" viewBox="0 0 160 160">
+            <circle class="timer-track" cx="80" cy="80" r="70"></circle>
+            <circle class="timer-progress" data-progress cx="80" cy="80" r="70"></circle>
+          </svg>
+          <span class="timer-number" data-countdown>10</span>
+        </div>
+        <p class="hold-prompt">You don't have to fight the moment or judge it. Just notice it.</p>
+        <button class="hold-end" type="button" data-end>End pause</button>
+      </div>
+
+      <div class="hold-state" data-state="complete" hidden>
+        <div class="hold-orbit hold-orbit-complete" aria-hidden="true">
+          <span class="orbit-ring orbit-ring-outer"></span>
+          <span class="orbit-ring orbit-ring-inner"></span>
+          <span class="orbit-centre"></span>
+        </div>
+        <p class="hold-state-label">PAUSE COMPLETE</p>
+        <h3>You made space for a choice.</h3>
+        <p>A pause does not solve everything. It can give you a moment to decide what would help next.</p>
+        <div class="hold-choices">
+          <button type="button" data-return>Return to what I was doing</button>
+          <button type="button" data-again>Take another moment</button>
+          <a href="#how-it-works">Explore how Nūr works <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="hold-state" data-state="ended" hidden>
+        <div class="hold-orbit" aria-hidden="true">
+          <span class="orbit-ring orbit-ring-outer"></span>
+          <span class="orbit-ring orbit-ring-inner"></span>
+          <span class="orbit-centre"></span>
+        </div>
+        <h3>You can choose what comes next.</h3>
+        <p>You ended the pause when you wanted to. That is completely okay.</p>
+        <div class="hold-choices">
+          <button type="button" data-return>Return to what I was doing</button>
+          <button type="button" data-again>Take another moment</button>
+          <a href="#how-it-works">Explore how Nūr works <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <p class="hold-boundary">This is a website preview. It does not block apps, monitor your activity, or record your choices.</p>
+      <p class="sr-only" data-announcement role="status" aria-live="polite" aria-atomic="true"></p>
+      <noscript><p class="no-script-note">The interactive pause needs JavaScript. You can still <a href="#how-it-works">explore how Nūr works</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hold-section {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(4.5rem, 8vw, 7rem);
+    border-block: 1px solid var(--color-border);
+    background:
+      radial-gradient(ellipse at 78% 50%, rgb(28 106 69 / 12%), transparent 42%),
+      color-mix(in srgb, var(--color-surface) 34%, var(--color-bg));
+  }
+  .hold-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
+    align-items: center;
+    gap: clamp(2.5rem, 7vw, 6.5rem);
+  }
+  .hold-copy h2 { max-width: 520px; margin: 1.1rem 0; font-size: clamp(2.5rem, 5vw, 4.4rem); }
+  .hold-lead { max-width: 490px; color: var(--color-text-muted); font-size: 1.05rem; }
+  .hold-preview-label { margin-top: 2rem; color: var(--color-accent); font-size: .7rem; font-weight: 700; letter-spacing: .15em; }
+  .hold-card {
+    position: relative;
+    min-height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: 1.75rem;
+    text-align: center;
+  }
+  .hold-state { display: flex; flex-direction: column; align-items: center; }
+  .hold-state[hidden] { display: none; }
+  .hold-state h3 { max-width: 420px; margin: 1.35rem 0 .65rem; font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.15; }
+  .hold-state > p:not(.hold-state-label) { max-width: 390px; margin: 0 auto; color: var(--color-text-muted); font-size: .9rem; }
+  .hold-orbit { position: relative; display: grid; width: 118px; aspect-ratio: 1; place-items: center; }
+  .orbit-ring { position: absolute; border: 1px solid rgb(101 217 160 / 27%); border-radius: 50%; }
+  .orbit-ring-outer { inset: 0; }
+  .orbit-ring-inner { inset: 15px; border-color: rgb(101 217 160 / 42%); }
+  .orbit-centre { width: 34px; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #A3F0C6, #3AAB76 68%, #17613F); box-shadow: 0 0 34px rgb(101 217 160 / 35%); }
+  .hold-primary { margin-top: 1.6rem; }
+  .hold-skip { margin-top: 1rem; color: var(--color-text-muted); font-size: .82rem; text-decoration: none; }
+  .hold-skip:hover { color: var(--color-accent); }
+  .timer-wrap { position: relative; display: grid; width: 178px; aspect-ratio: 1; place-items: center; }
+  .timer-ring { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .timer-ring circle { fill: none; stroke-width: 2; }
+  .timer-track { stroke: var(--color-border); }
+  .timer-progress { stroke: var(--color-accent); stroke-linecap: round; stroke-dasharray: 439.82; stroke-dashoffset: 0; }
+  .timer-number { font-family: var(--font-display); font-size: 4.3rem; font-variant-numeric: tabular-nums; line-height: 1; }
+  .hold-prompt { margin: 1.5rem 0 1rem; font-family: var(--font-display); font-size: 1.3rem; line-height: 1.35; }
+  .hold-end { padding: .65rem 1rem; border: 1px solid var(--color-border); border-radius: 999px; background: transparent; color: var(--color-text-muted); cursor: pointer; font-size: .85rem; }
+  .hold-end:hover { border-color: var(--color-accent); color: var(--color-text); }
+  .hold-state-label { margin: 1rem 0 0 !important; color: var(--color-accent) !important; font-size: .68rem !important; font-weight: 700; letter-spacing: .16em; }
+  .hold-choices { display: grid; width: 100%; max-width: 340px; gap: .55rem; margin-top: 1.5rem; }
+  .hold-choices button, .hold-choices a {
+    display: block;
+    width: 100%;
+    padding: .85rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: .8rem;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    font: inherit;
+    font-size: .82rem;
+    text-align: center;
+    text-decoration: none;
+  }
+  .hold-choices button:hover, .hold-choices a:hover { border-color: var(--color-accent); background: rgb(101 217 160 / 7%); }
+  .hold-choices a { color: var(--color-accent); }
+  .hold-boundary { position: absolute; right: 1.5rem; bottom: 1.1rem; left: 1.5rem; margin: 0; color: var(--color-text-muted); font-size: .68rem; line-height: 1.45; text-align: center; }
+  .no-script-note { margin-top: 1rem; color: var(--color-text-muted); font-size: .8rem; }
+  .no-script-note a { color: var(--color-accent); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
+  @media (max-width: 800px) {
+    .hold-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .hold-copy { max-width: 620px; }
+    .hold-card { min-height: 490px; }
+  }
+  @media (max-width: 420px) {
+    .hold-card { min-height: 510px; padding: 1.35rem 1rem 3.5rem; }
+    .hold-boundary { right: 1rem; left: 1rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .timer-progress { transition: none; }
+  }
+</style>
+
+<script>
+  const demo = document.querySelector<HTMLElement>("[data-hold-demo]");
+
+  if (demo) {
+    const states = Array.from(demo.querySelectorAll<HTMLElement>("[data-state]"));
+    const countdown = demo.querySelector<HTMLElement>("[data-countdown]");
+    const progress = demo.querySelector<SVGCircleElement>("[data-progress]");
+    const announcement = demo.querySelector<HTMLElement>("[data-announcement]");
+    const circumference = 2 * Math.PI * 70;
+    let remaining = 10;
+    let interval: ReturnType<typeof setInterval> | undefined;
+
+    const showState = (name: string, message: string) => {
+      states.forEach((state) => {
+        state.hidden = state.dataset.state !== name;
+      });
+      if (announcement) announcement.textContent = message;
+    };
+
+    const clearTimer = () => {
+      if (interval !== undefined) {
+        clearInterval(interval);
+        interval = undefined;
+      }
+    };
+
+    const updateProgress = () => {
+      if (countdown) countdown.textContent = String(remaining);
+      if (progress) {
+        progress.style.strokeDasharray = String(circumference);
+        progress.style.strokeDashoffset = String(circumference * (1 - remaining / 10));
+      }
+    };
+
+    const startPause = () => {
+      clearTimer();
+      remaining = 10;
+      updateProgress();
+      showState("running", "Your 10-second pause has started.");
+      interval = setInterval(() => {
+        remaining -= 1;
+        updateProgress();
+        if (remaining <= 0) {
+          clearTimer();
+          showState("complete", "Pause complete. You made space for a choice.");
+        }
+      }, 1000);
+    };
+
+    demo.querySelector("[data-start]")?.addEventListener("click", startPause);
+    demo.querySelector("[data-end]")?.addEventListener("click", () => {
+      clearTimer();
+      showState("ended", "Pause ended. You can choose what comes next.");
+    });
+    demo.querySelector("[data-again]")?.addEventListener("click", startPause);
+    demo.querySelectorAll("[data-return]").forEach((button) => {
+      button.addEventListener("click", () => {
+        clearTimer();
+        showState("ready", "You're back at the start. You can pause again whenever you want.");
+      });
+    });
+    demo.querySelectorAll('a[href="#how-it-works"]').forEach((link) => {
+      link.addEventListener("click", clearTimer);
+    });
+    window.addEventListener("pagehide", clearTimer, { once: true });
+  }
+</script>
