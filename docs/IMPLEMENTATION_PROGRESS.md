@@ -16,7 +16,7 @@ The first source files have been added to the website branch. This is an initial
 - Skip link and shared site footer.
 - Responsive site header with desktop links and a native disclosure-based mobile menu.
 - Homepage hero with CSS-generated concentric light, emerald illumination and a subtle horizon arc.
-- Initial homepage sections introducing Nūr, its support areas and its user-controlled philosophy.
+- Initial homepage sections introducing Nūr, its support areas and its user-controlled philosophy.\n- Interactive Hold demonstration with ready, running, complete and early-ended states; 10-second timer; restart and return actions; privacy boundary note.
 - Reduced-motion handling, focus-visible styles and responsive layouts.
 
 ### Files added or updated
@@ -25,7 +25,7 @@ The first source files have been added to the website branch. This is an initial
 - `src/layouts/BaseLayout.astro`
 - `src/components/layout/SiteHeader.astro`
 - `src/components/home/HeroSection.astro`
-- `src/pages/index.astro`
+- `src/pages/index.astro`\n- `src/components/home/HoldDemo.astro`
 - `docs/COMPONENT_ARCHITECTURE.md`
 
 ### Deliberately not implemented yet
@@ -34,7 +34,7 @@ The first source files have been added to the website branch. This is an initial
 - Analytics, cookies, trackers or third-party scripts.
 - App screenshots or fabricated product UI.
 - Live protection, account or app-user integrations.
-- The complete Hold interaction.
+- Additional Hold interaction verification, accessibility review and browser testing.
 - Full feature, privacy, FAQ, about, legal or support pages.
 - Hosting, domain configuration or public deployment.
 
@@ -44,7 +44,7 @@ The hero currently directs visitors to the explanatory content rather than a non
 
 | Check | Status |
 |---|---|
-| GitHub source files created | Complete |
+| GitHub source files created | Complete |\n| Hold demo source committed | Complete |
 | Source files re-fetched from GitHub | Pending final verification |
 | Astro production build | Not run |
 | Type checking | Not run |
