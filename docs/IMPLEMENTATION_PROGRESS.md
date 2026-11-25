@@ -3,15 +3,15 @@
 **Updated:** 25 November 2026  
 **Branch:** `feature/website-design-system`
 
-## Current milestone: homepage foundation and core trust content
+## Current milestone: homepage foundation and first secondary page
 
-Initial homepage sections and shared layout source are committed to this branch. This is source-control progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not yet been tested.
+Initial homepage sections, shared layout source and the standalone How Nūr Works page are committed to this branch. This is source-control progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not yet been tested.
 
 ### Implemented in source control
 
 - Global CSS tokens for the approved forest-green identity and system-preference themes.
 - Shared Astro document layout, metadata defaults, skip link, header and responsive footer.
-- Responsive navigation and homepage hero with CSS-generated concentric light, emerald illumination and horizon arc.
+- Responsive navigation and homepage hero with CSS-generated concentric light, emerald illumination and horizon arc.\n- Standalone `/how-it-works/` page with seven-stage cycle visual, detailed explanations, reflective prompts and explicit product boundaries.
 - Privacy-first interactive Hold demonstration with ready, running, complete and early-ended states.
 - Seven-stage product philosophy section: PROTECT, RESIST, RECOVER, REBUILD, LIVE, LEARN and ADAPT.
 - Six-card feature grid: Nūr Shield, Focus, Reset & Recovery, Insights & Growth, Accountability and optional Islamic Mode.
@@ -38,7 +38,7 @@ Initial homepage sections and shared layout source are committed to this branch.
 - `src/components/home/AboutPreview.astro`
 - `src/components/home/FAQPreview.astro`
 - `src/components/home/AlphaCallout.astro`
-- `src/pages/index.astro`
+- `src/pages/index.astro`\n- `src/pages/how-it-works.astro`
 
 ### Documentation updated
 
@@ -67,7 +67,7 @@ Initial homepage sections and shared layout source are committed to this branch.
 
 | Check | Status |
 |---|---|
-| Homepage sections committed | Complete |
+| Homepage sections committed | Complete |\n| Standalone How Nūr Works page committed | Complete |\n| Shared navigation and footer secondary-route links updated | Complete |
 | Closed-alpha status callout committed | Complete |
 | Responsive footer source committed | Complete |
 | Footer and CTA destinations checked against current homepage IDs | Complete (source review) |
