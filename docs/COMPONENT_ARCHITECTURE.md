@@ -1,6 +1,6 @@
 # Nūr Website — Component Architecture Specification
 
-**Status:** Architecture specification; initial homepage foundation, product-cycle section, feature grid, Privacy & Trust section, limitations preview, About section, FAQ section, closed-alpha callout and responsive footer implemented in source control; verification pending
+**Status:** Architecture specification; initial homepage foundation, product-cycle section, feature grid, Privacy & Trust section, limitations preview, About section, FAQ section, closed-alpha callout, responsive footer and standalone How Nūr Works route implemented in source control; verification pending
 **Date:** 25 November 2026
 **Repository:** `hassantaiwo866-dotcom/nur-website`
 **Working branch:** `feature/website-design-system`
@@ -370,3 +370,14 @@ Implemented on `feature/website-design-system`:
 **Not implemented:** alpha application backend, email capture, legal pages, support contact, deployment or a public updates subscription.
 
 **Verification:** source files and in-page link targets were read back from GitHub. Astro build, browser rendering, keyboard testing and device review remain pending.
+
+
+## 16. Standalone How Nūr Works page
+
+Route: `src/pages/how-it-works.astro`
+
+The page uses the shared `BaseLayout.astro` and contains a responsive cycle visual, seven static stage explanations, reflective prompts, a product-truth section and cross-links to homepage features and alpha status. It does not require a client-side framework or visitor-data storage.
+
+The shared header navigation now uses `/how-it-works/` for the page and root-relative homepage anchors for the other sections. Footer links were also changed to root-relative paths so they work from secondary routes.
+
+Build and browser verification remain pending.
