@@ -1,6 +1,6 @@
 # Nūr Website — What Nūr Cannot Do
 
-**Status:** Proposed public-facing content and claim boundaries; not implemented  
+**Status:** Homepage limitations section implemented; full standalone page and verification pending  
 **Date:** 25 November 2026  
 **Website branch:** `feature/website-design-system`  
 **App baseline reviewed:** `integration/alpha-readiness` at `055d9cc5d3e8fa0f7bd87fa0fe8defdb819ef9fc`
@@ -210,3 +210,20 @@ The roadmap explicitly separates planned work from implemented work and requires
 ## 13. Implementation status
 
 This file defines public-facing content and claim boundaries. It does not change app behaviour, provide medical or legal advice, or certify security. Re-check the exact public release before publishing.
+
+
+## 8. Homepage implementation record
+
+The six concise boundary cards are implemented in `src/components/home/LimitsPreview.astro` and integrated into `src/pages/index.astro` after Privacy & Trust.
+
+The homepage version covers:
+- Technical limits of protection.
+- User agency and limits of habit/outcome guarantees.
+- Non-clinical recovery support and no diagnosis/treatment claims.
+- Optional Islamic Mode and religious-authority boundaries.
+- Privacy/security and accountability limits.
+- AI uncertainty if introduced, and the importance of real-world support.
+
+The homepage section intentionally does not reproduce every detailed technical caveat in this specification. This document remains the detailed editorial and claim-boundary reference for a future standalone Limitations page.
+
+**Verification still required:** confirm the current release branch and physical-device protection coverage; review actual AI integration status and provider data flows before making any AI-specific public claims; legal and safety review of final support language; Astro build, browser, accessibility and device checks.
