@@ -1,6 +1,6 @@
 # Nūr Website — Information Architecture & Navigation Specification
 
-**Status:** Proposed site structure; not implemented
+**Status:** Architecture specification; homepage core sections, closed-alpha status callout and responsive footer implemented in source control; verification pending
 **Date:** 25 November 2026
 **Repository:** `hassantaiwo866-dotcom/nur-website`
 **Working branch:** `feature/website-design-system`
@@ -13,7 +13,7 @@
 
 This document defines the public website's page structure, navigation, URL conventions, user journeys and implementation order. It consolidates the existing design, feature, privacy, FAQ, About and closed-alpha specifications into one navigable site.
 
-It is an information-architecture specification only. It does not implement routes, components, content or backend services.
+This remains the information-architecture reference. Selected homepage components are now implemented; secondary routes, legal pages, support services and backend services remain pending.
 
 ## 2. Site goals and priority
 
@@ -293,3 +293,20 @@ The app implementation baseline is a separate repository and branch. The app is 
 ---
 
 **Implementation boundary:** This document defines site architecture and implementation order. It does not create website routes or components, connect a waitlist, publish legal pages, deploy hosting or change the Nūr app.
+
+
+## 15. Homepage closing CTA and footer — implementation record
+
+The homepage now ends with a static closed-alpha status callout:
+- It states that Nūr is in development and closed-alpha applications are not open.
+- It offers a working in-page link to How Nūr Works.
+- It does not display an active application form, collect email addresses or promise a release date.
+
+The shared layout footer now groups links into:
+- Explore: How Nūr Works, Features and About.
+- Trust: Privacy & Trust, What Nūr Cannot Do and FAQ.
+- Availability: current development status and closed-alpha status anchor.
+
+Every footer destination currently points to an existing homepage section. Legal, contact, data-request and social links are intentionally omitted because no verified destination or operational process has been established.
+
+The Astro build, browser rendering, accessibility and device checks remain pending.
