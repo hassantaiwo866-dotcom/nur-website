@@ -1,0 +1,68 @@
+---
+import SiteHeader from "../components/layout/SiteHeader.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Nūr — Build the person you want to become",
+  description = "Protect your attention. Strengthen self-control. Recover, rebuild and grow."
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#03140F" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="dark light" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/" aria-label="Nūr home">nūr<span>.</span></a>
+        <p>Self-control. Recovery. Growth.</p>
+        <small>© {new Date().getFullYear()} Nūr. Built for intentional growth.</small>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-footer {
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg);
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    text-decoration: none;
+  }
+  .footer-brand span { color: var(--color-accent); }
+  .footer-inner p, .footer-inner small {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: .8rem;
+  }
+  @media (max-width: 640px) {
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
