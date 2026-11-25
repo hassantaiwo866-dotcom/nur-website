@@ -1,6 +1,6 @@
 # Nūr Website — Closed Alpha Access Specification
 
-**Status:** Proposed flow and copy; not implemented
+**Status:** Proposed access flow; closed-state status copy implemented on homepage; request flow not implemented
 **Date:** 25 November 2026
 **Website branch:** `feature/website-design-system`
 **App baseline checked:** `integration/alpha-readiness` at `055d9cc5d3e8fa0f7bd87fa0fe8defdb819ef9fc`
@@ -212,3 +212,12 @@ Do not open applications until all are complete:
 ## 12. Implementation boundary
 
 This specification does not implement a form, waitlist database, email integration, admin dashboard, invitation service, CAPTCHA, analytics, app distribution or legal compliance. Do not collect real applicant data until the full operational and privacy review is complete.
+
+
+## 11. Current homepage status implementation
+
+The homepage closing callout in `src/components/home/AlphaCallout.astro` and the shared footer state that Nūr is in development and closed-alpha applications are not open. The callout links to the existing How Nūr Works section only.
+
+No email address, age confirmation or other personal information is collected. There is no waitlist, application submission, email verification, invitation workflow or download link. This is a status display, not an alpha access system.
+
+The status must be changed only after the application process, privacy notice, legal review, support ownership and distribution method are implemented and verified.
