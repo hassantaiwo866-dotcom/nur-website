@@ -3,7 +3,7 @@
 **Updated:** 25 November 2026  
 **Branch:** `feature/website-design-system`
 
-## Current milestone: homepage foundation, trust storytelling, product-boundary education and About storytelling
+## Current milestone: homepage foundation, trust storytelling, product-boundary education, About storytelling and FAQ
 
 Initial homepage sections are committed to the website branch. This is implementation progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not been tested in this environment.
 
@@ -57,7 +57,7 @@ Initial homepage sections are committed to the website branch. This is implement
 |---|---|
 | Homepage source committed | Complete |
 | Privacy section source committed | Complete |
-| Limitations preview source committed | Complete |\n| About preview source committed | Complete |
+| Limitations preview source committed | Complete |\n| About preview source committed | Complete |\n| Homepage FAQ source committed | Complete |
 | Documentation updated | Complete |
 | GitHub readback | Complete for current changes |
 | App privacy source/docs reviewed | Complete (static source review) |
