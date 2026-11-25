@@ -1,0 +1,110 @@
+---
+const principles = [
+  { number: "01", title: "Private by design", text: "Personal activity should not be collected simply because it can be. Nūr aims to use local processing and storage where practical, and minimise information sent to online services." },
+  { number: "02", title: "Sharing by choice", text: "Accountability is intended to be deliberate and limited. It should never mean unrestricted access to your device, browsing history or private conversations." },
+  { number: "03", title: "Clear controls", text: "You should be able to understand what is stored, what can be exported, what can be deleted and when a separate action is required." }
+];
+---
+<section id="privacy" class="privacy-section section" aria-labelledby="privacy-title">
+  <div class="container">
+    <header class="privacy-heading">
+      <p class="eyebrow">YOUR DATA. YOUR CHOICES.</p>
+      <h2 id="privacy-title" class="display-heading">Personal growth should not come at the cost of your privacy.</h2>
+      <p>Nūr is being built around privacy, transparency and user control. We aim to keep personal activity on your device where practical, explain clearly when a feature uses an online service, and give you meaningful choices about what you share.</p>
+    </header>
+
+    <div class="privacy-principles">
+      {principles.map((principle) => (
+        <article class="principle-card">
+          <span class="principle-number">{principle.number}</span>
+          <h3>{principle.title}</h3>
+          <p>{principle.text}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="data-panel">
+      <div class="data-panel-heading">
+        <p class="eyebrow">UNDERSTANDING THE BOUNDARIES</p>
+        <h3>Where information may live</h3>
+        <p>The exact information depends on the features you use and the version of Nūr. This is a high-level explanation, not a complete data inventory.</p>
+      </div>
+      <div class="data-columns">
+        <article class="data-column">
+          <span class="data-icon" aria-hidden="true">⌂</span>
+          <h4>On your device</h4>
+          <p>Some settings and activity records are stored locally. Examples in the inspected app code include Focus sessions, habits, recovery feedback, selected protection settings and optional Islamic Mode preferences.</p>
+        </article>
+        <article class="data-column">
+          <span class="data-icon" aria-hidden="true">↗</span>
+          <h4>Online services</h4>
+          <p>Some features may use online services for accounts or sharing. The inspected integration includes remote accountability invitations, partner relationships, events and notifications.</p>
+        </article>
+      </div>
+      <p class="data-caveat">The list above is illustrative, not exhaustive. It does not describe every Android-native store, offline content cache, provider or future feature.</p>
+    </div>
+
+    <div class="sharing-panel">
+      <div class="sharing-copy">
+        <p class="eyebrow">ACCOUNTABILITY WITHOUT SURVEILLANCE</p>
+        <h3>Support should not mean giving someone the keys to your private life.</h3>
+        <p>Nūr's intended boundary is that a trusted person receives only approved activity you choose to make available—not unrestricted browsing history or private conversations.</p>
+        <p class="sharing-caveat">The complete two-person workflow, remote access controls and revocation behaviour still require end-to-end verification. Do not treat this as a guarantee that every accountability flow is ready.</p>
+      </div>
+      <div class="sharing-mark" aria-hidden="true">
+        <span class="sharing-ring"></span>
+        <span class="sharing-core">Your<br />choice</span>
+      </div>
+    </div>
+
+    <div class="deletion-note">
+      <p class="eyebrow">A CLEAR LIMIT</p>
+      <h3>Deleting local data is not the same as deleting everything.</h3>
+      <p>The inspected app's current privacy service exports and deletes a defined set of local Flutter preferences. It does not provide a complete remote account-data export or account-deletion workflow. Separate Android-native storage and online records may require separate steps.</p>
+      <p>We will describe export, deletion and retention accurately for the release version rather than promise that one action removes every copy.</p>
+    </div>
+
+    <p class="privacy-footer">Privacy details must be checked against the exact public release build and its deployed services before launch.</p>
+  </div>
+</section>
+
+<style>
+  .privacy-section { border-top: 1px solid var(--color-border); background: var(--color-bg); }
+  .privacy-heading { max-width: 850px; }
+  .privacy-heading h2 { margin: 1rem 0 1.15rem; font-size: clamp(2.35rem, 5vw, 4.15rem); }
+  .privacy-heading > p:last-child { max-width: 720px; color: var(--color-text-muted); font-size: 1.02rem; }
+  .privacy-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .principle-card { padding-top: 1.2rem; border-top: 1px solid var(--color-border); }
+  .principle-number { color: var(--color-accent); font-size: .7rem; font-weight: 700; letter-spacing: .14em; }
+  .principle-card h3 { margin: 1rem 0 .55rem; font-family: var(--font-display); font-size: 1.55rem; font-weight: 400; }
+  .principle-card p, .data-column p { margin: 0; color: var(--color-text-muted); font-size: .88rem; line-height: 1.7; }
+  .data-panel { margin-top: 4rem; padding: clamp(1.3rem, 4vw, 2.5rem); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); }
+  .data-panel-heading { max-width: 650px; }
+  .data-panel-heading h3, .sharing-copy h3, .deletion-note h3 { margin: .7rem 0 .65rem; font-family: var(--font-display); font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 400; line-height: 1.2; }
+  .data-panel-heading > p:last-child { margin: 0; color: var(--color-text-muted); font-size: .88rem; }
+  .data-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
+  .data-column { padding-top: 1.2rem; border-top: 1px solid var(--color-border); }
+  .data-icon { color: var(--color-accent); font-size: 1.45rem; }
+  .data-column h4 { margin: .7rem 0 .45rem; font-size: 1rem; }
+  .data-caveat, .sharing-caveat { color: var(--color-text-muted); font-size: .76rem; line-height: 1.6; }
+  .data-caveat { margin: 1.4rem 0 0; }
+  .sharing-panel { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(180px, .6fr); align-items: center; gap: 2rem; margin-top: 1.2rem; padding: clamp(1.3rem, 4vw, 2.5rem); border: 1px solid var(--color-border); border-radius: var(--radius-card); }
+  .sharing-copy { max-width: 670px; }
+  .sharing-copy > p:not(.eyebrow) { color: var(--color-text-muted); font-size: .9rem; line-height: 1.7; }
+  .sharing-mark { position: relative; display: grid; min-height: 190px; place-items: center; }
+  .sharing-ring { position: absolute; width: 170px; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--color-accent) 55%, transparent); border-radius: 50%; box-shadow: 0 0 35px rgb(101 217 160 / 8%); }
+  .sharing-core { display: grid; width: 104px; aspect-ratio: 1; place-content: center; border: 1px solid var(--color-border); border-radius: 50%; background: var(--color-surface); color: var(--color-text); font-family: var(--font-display); font-size: 1.2rem; line-height: 1.1; text-align: center; }
+  .deletion-note { max-width: 820px; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
+  .deletion-note > p:not(.eyebrow), .privacy-footer { color: var(--color-text-muted); font-size: .86rem; line-height: 1.7; }
+  .privacy-footer { margin-top: 2rem; font-size: .75rem; }
+  @media (max-width: 760px) {
+    .privacy-principles { grid-template-columns: 1fr; gap: 1.4rem; margin-top: 2rem; }
+    .principle-card { padding-top: .9rem; }
+    .principle-card h3 { margin-top: .7rem; }
+    .data-columns { grid-template-columns: 1fr; gap: 1.2rem; }
+    .sharing-panel { grid-template-columns: 1fr; }
+    .sharing-mark { min-height: 145px; }
+    .sharing-ring { width: 135px; }
+    .sharing-core { width: 84px; }
+  }
+</style>
