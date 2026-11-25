@@ -1,0 +1,104 @@
+---
+const links = [
+  { href: "#how-it-works", label: "How it works" },
+  { href: "#features", label: "Features" },
+  { href: "#our-approach", label: "Our approach" }
+];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/" aria-label="Nūr home">nūr<span>.</span></a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {links.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+
+    <a class="header-cta" href="#how-it-works">Discover Nūr <span aria-hidden="true">↗</span></a>
+
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation menu">
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+      </summary>
+      <nav aria-label="Mobile navigation">
+        {links.map((link) => <a href={link.href}>{link.label}</a>)}
+        <a class="mobile-cta" href="#how-it-works">Discover Nūr <span aria-hidden="true">↗</span></a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: relative;
+    z-index: 20;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 65%, transparent);
+    background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  }
+  .header-inner {
+    display: flex;
+    min-height: 5.25rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .wordmark {
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    letter-spacing: -.08em;
+    line-height: 1;
+    text-decoration: none;
+  }
+  .wordmark span { color: var(--color-accent); }
+  .desktop-nav { display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.5rem); }
+  .desktop-nav a, .header-cta {
+    color: var(--color-text-muted);
+    font-size: .83rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 160ms ease;
+  }
+  .desktop-nav a:hover, .header-cta:hover { color: var(--color-accent); }
+  .header-cta { color: var(--color-text); }
+  .header-cta span { margin-left: .3rem; color: var(--color-accent); }
+  .mobile-menu { display: none; position: relative; }
+  .mobile-menu summary {
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    cursor: pointer;
+    list-style: none;
+  }
+  .mobile-menu summary::-webkit-details-marker { display: none; }
+  .menu-icon { display: grid; gap: 5px; }
+  .menu-icon i { display: block; width: 17px; height: 1.5px; background: var(--color-text); }
+  .mobile-menu[open] nav {
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    display: grid;
+    width: min(18rem, calc(100vw - 2.5rem));
+    gap: .25rem;
+    padding: .75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-soft);
+  }
+  .mobile-menu nav a {
+    padding: .85rem;
+    border-radius: .65rem;
+    color: var(--color-text);
+    font-size: .9rem;
+    text-decoration: none;
+  }
+  .mobile-menu nav a:hover { background: var(--color-surface-elevated); }
+  .mobile-menu nav .mobile-cta { color: var(--color-accent); }
+  @media (max-width: 760px) {
+    .desktop-nav, .header-cta { display: none; }
+    .mobile-menu { display: block; }
+  }
+</style>
