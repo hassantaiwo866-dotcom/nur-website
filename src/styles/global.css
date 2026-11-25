@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: dark light;
+  --color-bg: #03140F;
+  --color-surface: #0D3023;
+  --color-surface-elevated: #123B2B;
+  --color-accent: #65D9A0;
+  --color-accent-hover: #80E5B2;
+  --color-text: #F1F7F3;
+  --color-text-muted: #B1C2B9;
+  --color-border: #315344;
+  --color-error: #E28B8B;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --content-width: 1160px;
+  --page-gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --radius-card: 1.5rem;
+  --radius-pill: 999px;
+  --shadow-soft: 0 24px 80px rgb(0 0 0 / 20%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --color-bg: #F4F7F3;
+    --color-surface: #FFFFFF;
+    --color-surface-elevated: #E8F1EB;
+    --color-accent: #16764D;
+    --color-accent-hover: #0E603D;
+    --color-text: #10271D;
+    --color-text-muted: #52685C;
+    --color-border: #CAD9CF;
+    --color-error: #A13E3E;
+    --shadow-soft: 0 24px 80px rgb(17 46 31 / 10%);
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body, button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+button { font: inherit; }
+img, svg { display: block; max-width: 100%; }
+::selection { background: var(--color-accent); color: #03140F; }
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  padding: .75rem 1rem;
+  transform: translateY(-160%);
+  border-radius: .75rem;
+  background: var(--color-accent);
+  color: #03140F;
+  font-weight: 700;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.container {
+  width: min(100% - (var(--page-gutter) * 2), var(--content-width));
+  margin-inline: auto;
+}
+.eyebrow {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .19em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.display-heading {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1.04;
+}
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  padding: .85rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: #062016;
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+.button:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
+.button--secondary {
+  border-color: var(--color-border);
+  background: rgb(255 255 255 / 4%);
+  color: var(--color-text);
+}
+.button--secondary:hover {
+  border-color: var(--color-accent);
+  background: rgb(101 217 160 / 9%);
+}
+.glass-panel {
+  border: 1px solid rgb(255 255 255 / 13%);
+  background: rgb(13 48 35 / 54%);
+  box-shadow: var(--shadow-soft);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+@media (prefers-color-scheme: light) {
+  .glass-panel {
+    border-color: rgb(20 70 45 / 13%);
+    background: rgb(255 255 255 / 76%);
+  }
+}
+.section { padding-block: clamp(4.5rem, 9vw, 8rem); }
+.muted { color: var(--color-text-muted); }
+
+@media (max-width: 640px) {
+  html { scroll-padding-top: 5rem; }
+  .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
