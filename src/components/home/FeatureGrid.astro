@@ -1,0 +1,71 @@
+---
+const features = [
+  { number: "01", symbol: "◌", name: "Nūr Shield", category: "PROTECTION", title: "Create stronger boundaries.", description: "Nūr's protection system is being developed to help limit access to selected websites and support more intentional use of your device.", note: "Protection foundation in development" },
+  { number: "02", symbol: "◎", name: "Focus", category: "INTENTION", title: "Give your attention somewhere meaningful.", description: "Set an intention, choose a session length and make time for the task in front of you. Focus sessions can retain their state and record completed activity.", note: "Focus foundation implemented; release flow to verify" },
+  { number: "03", symbol: "↺", name: "Reset & Recovery", category: "RECOVERY", title: "Begin again without shame.", description: "Use a recovery activity and, if you choose, reflect on whether it helped. You can skip the feedback; a difficult moment does not define you.", note: "Recovery activity and optional feedback foundation" },
+  { number: "04", symbol: "⌁", name: "Insights & Growth", category: "REFLECTION", title: "Notice what is helping you move forward.", description: "Review recorded Focus, recovery and growth activity over time. The aim is reflection—not judgement or a complete picture of everything you do.", note: "Local activity reporting foundation" },
+  { number: "05", symbol: "◇", name: "Accountability", category: "TRUSTED SUPPORT", title: "Invite support without giving up your privacy.", description: "Nūr is designed for deliberate, user-controlled sharing with someone you trust. The full two-person experience and its security still need verification.", note: "End-to-end workflow not yet verified" },
+  { number: "06", symbol: "☾", name: "Islamic Mode", category: "OPTIONAL · FAITH", title: "Make room for faith, if you choose.", description: "An optional space for faith-oriented intentions and carefully sourced Islamic content. Nūr is not a religious authority, and this mode is never required.", note: "Optional local settings and intention foundation" }
+];
+---
+<section id="features" class="features-section section" aria-labelledby="features-title">
+  <div class="container">
+    <header class="features-heading">
+      <p class="eyebrow">ONE SYSTEM. DIFFERENT KINDS OF SUPPORT.</p>
+      <h2 id="features-title" class="display-heading">The tools to protect your attention—and build beyond it.</h2>
+      <p>Nūr brings together tools for protection, focus, recovery and reflection. Use the parts that help you. Your progress remains yours to shape.</p>
+    </header>
+
+    <div class="features-grid">
+      {features.map((feature) => (
+        <article class="feature-card glass-panel">
+          <div class="feature-topline">
+            <span class="feature-symbol" aria-hidden="true">{feature.symbol}</span>
+            <span class="feature-number">{feature.number}</span>
+          </div>
+          <p class="feature-category">{feature.category}</p>
+          <h3>{feature.name}</h3>
+          <h4>{feature.title}</h4>
+          <p class="feature-description">{feature.description}</p>
+          <p class="feature-note">{feature.note}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="feature-availability">Some Nūr features are still being developed and tested. Availability may vary during the closed alpha. We'll be clear about what is ready, what is limited and what is still on the way.</p>
+  </div>
+</section>
+
+<style>
+  .features-section {
+    border-top: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-surface) 30%, var(--color-bg));
+  }
+  .features-heading { max-width: 790px; }
+  .features-heading h2 { margin: 1rem 0 1.1rem; font-size: clamp(2.35rem, 5vw, 4.15rem); }
+  .features-heading > p:last-child { max-width: 650px; margin: 0; color: var(--color-text-muted); font-size: 1.02rem; }
+  .features-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.75rem; }
+  .feature-card {
+    display: flex;
+    min-height: 330px;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+  }
+  .feature-topline { display: flex; align-items: center; justify-content: space-between; }
+  .feature-symbol { display: grid; width: 2.8rem; aspect-ratio: 1; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; color: var(--color-accent); font-size: 1.45rem; }
+  .feature-number { color: var(--color-text-muted); font-size: .7rem; letter-spacing: .12em; }
+  .feature-category { margin: 1.45rem 0 .45rem; color: var(--color-accent); font-size: .66rem; font-weight: 700; letter-spacing: .15em; }
+  .feature-card h3 { margin: 0; font-family: var(--font-display); font-size: 1.65rem; font-weight: 400; line-height: 1.2; }
+  .feature-card h4 { margin: .8rem 0 .35rem; font-size: .91rem; font-weight: 650; }
+  .feature-description { margin: 0; color: var(--color-text-muted); font-size: .84rem; line-height: 1.65; }
+  .feature-note { margin: auto 0 0; padding-top: 1.2rem; color: var(--color-text-muted); font-size: .7rem; line-height: 1.45; }
+  .feature-availability { max-width: 820px; margin: 1.5rem 0 0; color: var(--color-text-muted); font-size: .8rem; line-height: 1.6; }
+  @media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 580px) {
+    .features-grid { grid-template-columns: 1fr; gap: .8rem; margin-top: 2rem; }
+    .feature-card { min-height: 0; padding: 1.3rem; }
+    .feature-note { margin-top: .6rem; padding-top: .8rem; }
+  }
+</style>
