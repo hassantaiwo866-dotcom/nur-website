@@ -55,8 +55,13 @@ nur-website/
 │   │   ├── home/
 │   │   │   ├── HeroSection.astro
 │   │   │   ├── HoldDemo.astro
-│   │   │   ├── ProductLoop.astro\n│   │   │   ├── FeatureGrid.astro\n│   │   │   ├── PrivacyTrust.astro
-│   │   │   ├── LimitsPreview.astro\n│   │   │   ├── AboutPreview.astro\n│   │   │   ├── FAQPreview.astro\n│   │   │   └── AlphaCallout.astro
+│   │   │   ├── ProductLoop.astro
+│   │   │   ├── FeatureGrid.astro
+│   │   │   ├── PrivacyTrust.astro
+│   │   │   ├── LimitsPreview.astro
+│   │   │   ├── AboutPreview.astro
+│   │   │   ├── FAQPreview.astro
+│   │   │   └── AlphaCallout.astro
 │   │   │   ├── FeatureGrid.astro
 │   │   │   ├── ProductPreview.astro
 │   │   │   ├── TrustPreview.astro
