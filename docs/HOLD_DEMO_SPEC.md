@@ -1,6 +1,6 @@
 # Nūr Website — Hold Demonstration Specification
 
-**Status:** Proposed interaction; not implemented
+**Status:** Initial implementation committed; verification pending
 **Date:** 25 November 2026
 **Branch:** `feature/website-design-system`
 
@@ -138,4 +138,4 @@ The interaction is ready for review when:
 
 ## 10. Implementation status
 
-This document specifies the intended behaviour only. The Hold demonstration has not been implemented or tested. Implementation must wait until the existing local Astro project is synchronised with this GitHub branch and its current structure has been inspected.
+An initial Astro component has been added at `src/components/home/HoldDemo.astro` and placed on the homepage after the hero. It implements ready, running, completed and early-ended states, a 10-second client-side countdown, restart/return actions, a visible product-boundary note, and transient in-memory state only. It does not request or persist visitor input.\n\nThe implementation has not yet been run through an Astro production build, browser testing, assistive-technology review or real-device review. No-JavaScript fallback, timer cleanup, keyboard/touch behaviour, reduced motion and state announcements still require verification. The existing local Astro project must be inspected and reconciled before integration.
