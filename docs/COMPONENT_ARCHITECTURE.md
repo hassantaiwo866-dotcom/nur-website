@@ -1,6 +1,6 @@
 # Nūr Website — Component Architecture Specification
 
-**Status:** Architecture specification; initial homepage foundation, product-cycle section, feature grid, Privacy & Trust section, limitations preview, About section and FAQ section implemented in source control; verification pending
+**Status:** Architecture specification; initial homepage foundation, product-cycle section, feature grid, Privacy & Trust section, limitations preview, About section, FAQ section, closed-alpha callout and responsive footer implemented in source control; verification pending
 **Date:** 25 November 2026
 **Repository:** `hassantaiwo866-dotcom/nur-website`
 **Working branch:** `feature/website-design-system`
@@ -13,7 +13,7 @@
 
 Define reusable Astro components, layouts, page composition, styling boundaries and interaction ownership before implementation.
 
-This document began as a component architecture specification. Initial Astro page, layout, header, hero, Hold demo, product-cycle section, feature grid, Privacy & Trust section, limitations preview, About section, FAQ section and global stylesheet files have since been added on this branch. The existing local Astro scaffold still must be inspected and reconciled before these files are merged into the local working copy or deployed.
+This document began as a component architecture specification. Initial Astro page, layout, header, hero, Hold demo, product-cycle section, feature grid, Privacy & Trust section, limitations preview, About section, FAQ section, closed-alpha callout, responsive footer and global stylesheet files have since been added on this branch. The existing local Astro scaffold still must be inspected and reconciled before these files are merged into the local working copy or deployed.
 
 ## 2. Architecture principles
 
@@ -56,7 +56,7 @@ nur-website/
 │   │   │   ├── HeroSection.astro
 │   │   │   ├── HoldDemo.astro
 │   │   │   ├── ProductLoop.astro\n│   │   │   ├── FeatureGrid.astro\n│   │   │   ├── PrivacyTrust.astro
-│   │   │   ├── LimitsPreview.astro\n│   │   │   ├── AboutPreview.astro\n│   │   │   ├── FAQPreview.astro
+│   │   │   ├── LimitsPreview.astro\n│   │   │   ├── AboutPreview.astro\n│   │   │   ├── FAQPreview.astro\n│   │   │   └── AlphaCallout.astro
 │   │   │   ├── FeatureGrid.astro
 │   │   │   ├── ProductPreview.astro
 │   │   │   ├── TrustPreview.astro
@@ -324,7 +324,7 @@ Do not invent test scripts before inspecting the actual package scripts and inst
 2. Reconcile it with the current GitHub branch without overwriting either side.
 3. Confirm actual Astro version, dependencies, scripts, lockfile and build.
 4. Create or adapt tokens and BaseLayout.
-5. Build header, mobile navigation and footer.
+5. Build header, mobile navigation and footer. (The homepage footer now has responsive link groups; full secondary-page routes remain pending.)
 6. Build shared UI components.
 7. Compose homepage in approved order.
 8. Build secondary pages using ContentLayout.
@@ -357,3 +357,16 @@ The Nūr app repository is separate. This document does not change app source, a
 ---
 
 **Implementation boundary:** This document defines a proposed component architecture. It does not create components, modify the local Astro project, implement interactions or claim a successful build.
+
+
+## 15. Homepage closing CTA and footer implementation
+
+Implemented on `feature/website-design-system`:
+- `src/components/home/AlphaCallout.astro` presents Nūr as in development and explicitly says closed-alpha applications are not open.
+- The only action in the callout links to the existing `#how-it-works` section. It does not collect personal information or imply an active waitlist.
+- `src/layouts/BaseLayout.astro` now contains responsive footer groups linking only to existing homepage anchors: Explore, Trust and Availability.
+- The footer includes a current-year copyright line and a back-to-top link. No empty social icons, invented contact details or unfinished legal routes are shown.
+
+**Not implemented:** alpha application backend, email capture, legal pages, support contact, deployment or a public updates subscription.
+
+**Verification:** source files and in-page link targets were read back from GitHub. Astro build, browser rendering, keyboard testing and device review remain pending.
