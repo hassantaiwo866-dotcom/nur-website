@@ -1,0 +1,126 @@
+---
+const stages = [
+  { number: "01", name: "PROTECT", title: "Create healthier boundaries", description: "Reduce exposure to things that pull you away from your intentions. Protection can help create a better starting point." },
+  { number: "02", name: "RESIST", title: "Make room for a different choice", description: "Notice a difficult moment and create space before acting. You do not have to get every moment right." },
+  { number: "03", name: "RECOVER", title: "Return without shame", description: "When a plan breaks or a setback happens, consider one helpful next step. A difficult moment does not erase your effort." },
+  { number: "04", name: "REBUILD", title: "Strengthen better patterns", description: "Build routines through manageable actions. Change takes practice; it is not something an app can guarantee." },
+  { number: "05", name: "LIVE", title: "Put attention back into life", description: "Make more room for relationships, responsibilities, creativity, rest and the things that matter beyond a screen." },
+  { number: "06", name: "LEARN", title: "Understand what helps", description: "Reflect on your experience and notice what supports you, without turning your life into a scorecard." },
+  { number: "07", name: "ADAPT", title: "Adjust your approach", description: "Your circumstances can change. You remain in control of your goals, boundaries and next steps." }
+];
+---
+<section id="how-it-works" class="loop-section section" aria-labelledby="loop-title">
+  <div class="container">
+    <div class="loop-heading">
+      <p class="eyebrow">THE NŪR APPROACH</p>
+      <h2 id="loop-title" class="display-heading">Change is a process.<br /><span>Nūr helps you work through it.</span></h2>
+      <p class="loop-lead">Real progress is not a perfectly straight line. Some days you protect your attention. Some days you need to recover and begin again. Nūr is being built to support the whole process—not just the moment when things go wrong.</p>
+    </div>
+
+    <div class="loop-orbit" aria-hidden="true">
+      <span class="orbit-line"></span>
+      <span class="orbit-centre">A process<br />you can return to</span>
+      <span class="orbit-caption">REPEAT · REFLECT · ADJUST</span>
+    </div>
+
+    <ol class="stage-grid" aria-label="The seven parts of the Nūr approach">
+      {stages.map((stage) => (
+        <li class="stage-card glass-panel">
+          <span class="stage-number">{stage.number}</span>
+          <p class="stage-name">{stage.name}</p>
+          <h3>{stage.title}</h3>
+          <p class="stage-description">{stage.description}</p>
+        </li>
+      ))}
+    </ol>
+
+    <p class="loop-closing">You can move through this cycle more than once. A difficult day does not erase the work you've already done.</p>
+    <p class="loop-boundary">This is the framework behind Nūr's direction, not a claim that every stage is an automated or fully available app feature today.</p>
+  </div>
+</section>
+
+<style>
+  .loop-section {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--color-border);
+    background:
+      radial-gradient(ellipse at 50% 32%, rgb(36 120 78 / 12%), transparent 48%),
+      var(--color-bg);
+  }
+  .loop-heading { max-width: 790px; margin-inline: auto; text-align: center; }
+  .loop-heading h2 { margin: 1rem 0 1.25rem; font-size: clamp(2.45rem, 5.3vw, 4.5rem); }
+  .loop-heading h2 span { color: var(--color-accent); }
+  .loop-lead { max-width: 690px; margin: 0 auto; color: var(--color-text-muted); font-size: 1.02rem; }
+  .loop-orbit {
+    position: relative;
+    display: grid;
+    width: min(100%, 380px);
+    aspect-ratio: 2.6 / 1;
+    place-items: center;
+    margin: 2.5rem auto 2rem;
+  }
+  .orbit-line {
+    position: absolute;
+    inset: 13% 8%;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 48%, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 35px rgb(101 217 160 / 8%);
+  }
+  .orbit-centre {
+    display: grid;
+    width: 112px;
+    aspect-ratio: 1;
+    place-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: .95rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .orbit-caption {
+    position: absolute;
+    bottom: 0;
+    color: var(--color-accent);
+    font-size: .61rem;
+    font-weight: 700;
+    letter-spacing: .17em;
+  }
+  .stage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .stage-card {
+    min-height: 225px;
+    padding: 1.35rem;
+    border-radius: var(--radius-card);
+  }
+  .stage-number { color: var(--color-accent); font-size: .7rem; font-weight: 700; letter-spacing: .12em; }
+  .stage-name { margin: 1.25rem 0 .4rem; color: var(--color-accent); font-size: .7rem; font-weight: 700; letter-spacing: .14em; }
+  .stage-card h3 { margin: 0 0 .6rem; font-family: var(--font-display); font-size: 1.45rem; font-weight: 400; line-height: 1.18; }
+  .stage-description { margin: 0; color: var(--color-text-muted); font-size: .84rem; line-height: 1.6; }
+  .loop-closing { max-width: 680px; margin: 2rem auto .65rem; font-family: var(--font-display); font-size: clamp(1.25rem, 2.6vw, 1.7rem); line-height: 1.35; text-align: center; }
+  .loop-boundary { max-width: 700px; margin: 0 auto; color: var(--color-text-muted); font-size: .76rem; text-align: center; }
+  @media (min-width: 761px) {
+    .stage-card:nth-child(5) { grid-column: 2; }
+    .stage-card:nth-child(6), .stage-card:nth-child(7) { grid-column: span 1; }
+  }
+  @media (max-width: 900px) {
+    .stage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .stage-card:nth-child(5) { grid-column: auto; }
+  }
+  @media (max-width: 560px) {
+    .loop-orbit { width: min(100%, 300px); margin-block: 2rem 1.5rem; }
+    .stage-grid { grid-template-columns: 1fr; gap: .75rem; }
+    .stage-card { min-height: 0; padding: 1.2rem; }
+    .stage-name { margin-top: .8rem; }
+    .stage-card h3 { font-size: 1.35rem; }
+  }
+</style>
