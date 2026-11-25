@@ -3,9 +3,9 @@
 **Updated:** 25 November 2026  
 **Branch:** `feature/website-design-system`
 
-## Current milestone: homepage foundation, trust storytelling, product-boundary education, About storytelling and FAQ
+## Current milestone: homepage foundation and core trust content
 
-Initial homepage sections are committed to the website branch. This is implementation progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not been tested in this environment.
+Initial homepage sections are committed to this branch. This is source-control progress, not a verified release. The Astro build, browser behaviour, accessibility and physical-device rendering have not yet been tested.
 
 ### Implemented in source control
 
@@ -16,7 +16,9 @@ Initial homepage sections are committed to the website branch. This is implement
 - Seven-stage product philosophy section: PROTECT, RESIST, RECOVER, REBUILD, LIVE, LEARN and ADAPT.
 - Six-card feature grid: Nūr Shield, Focus, Reset & Recovery, Insights & Growth, Accountability and optional Islamic Mode.
 - Privacy & Trust section: three principles, local-versus-online explanation, accountability boundary and export/deletion limitations.
-- What Nūr Cannot Do preview: six concise boundary cards covering protection, user agency, recovery, Islamic Mode, privacy/accountability and AI/real-world support.\n- About Nūr preview: purpose, six-stage guiding framework, non-shaming product principles and an honest development-status note.
+- What Nūr Cannot Do preview: six concise boundary cards covering protection, user agency, recovery, Islamic Mode, privacy/accountability and AI/real-world support.
+- About Nūr preview: purpose, six-stage guiding framework, non-shaming product principles and an honest development-status note.
+- Homepage FAQ: six questions covering product purpose, protection limits, data storage, accountability, Islamic Mode and current availability. Uses native HTML disclosures.
 - Product claims qualified against inspected app source and privacy inventory.
 - Responsive layouts, reduced-motion handling and visible focus styling.
 
@@ -30,7 +32,9 @@ Initial homepage sections are committed to the website branch. This is implement
 - `src/components/home/ProductLoop.astro`
 - `src/components/home/FeatureGrid.astro`
 - `src/components/home/PrivacyTrust.astro`
-- `src/components/home/LimitsPreview.astro`\n- `src/components/home/AboutPreview.astro`
+- `src/components/home/LimitsPreview.astro`
+- `src/components/home/AboutPreview.astro`
+- `src/components/home/FAQPreview.astro`
 - `src/pages/index.astro`
 
 ### Documentation updated
@@ -39,7 +43,9 @@ Initial homepage sections are committed to the website branch. This is implement
 - `docs/HOW_NUR_WORKS_SPEC.md`
 - `docs/FEATURES_SECTION_SPEC.md`
 - `docs/PRIVACY_TRUST_SECTION_SPEC.md`
-- `docs/WHAT_NUR_CANNOT_DO_SPEC.md`\n- `docs/ABOUT_NUR_SECTION_SPEC.md`
+- `docs/WHAT_NUR_CANNOT_DO_SPEC.md`
+- `docs/ABOUT_NUR_SECTION_SPEC.md`
+- `docs/FAQ_SECTION_SPEC.md`
 - `docs/IMPLEMENTATION_PROGRESS.md`
 
 ### Deliberately not implemented
@@ -57,7 +63,9 @@ Initial homepage sections are committed to the website branch. This is implement
 |---|---|
 | Homepage source committed | Complete |
 | Privacy section source committed | Complete |
-| Limitations preview source committed | Complete |\n| About preview source committed | Complete |\n| Homepage FAQ source committed | Complete |
+| Limitations preview source committed | Complete |
+| About preview source committed | Complete |
+| Homepage FAQ source committed | Complete |
 | Documentation updated | Complete |
 | GitHub readback | Complete for current changes |
 | App privacy source/docs reviewed | Complete (static source review) |
