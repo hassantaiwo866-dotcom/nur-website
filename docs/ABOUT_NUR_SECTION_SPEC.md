@@ -1,6 +1,6 @@
 # Nūr Website — About Section Specification
 
-**Status:** Proposed brand story and public copy; not implemented
+**Status:** Homepage About section implemented; standalone About page and verification pending
 **Date:** 25 November 2026
 **Website branch:** `feature/website-design-system`
 **App implementation baseline checked:** `integration/alpha-readiness` at `055d9cc5d3e8fa0f7bd87fa0fe8defdb819ef9fc`
@@ -171,10 +171,10 @@ Do not add a founder portrait, team photo or testimonial until genuine assets an
 - [ ] No unapproved personal founder details or fabricated team credentials appear.
 - [ ] Islamic Mode is described as optional.
 - [ ] Privacy and capability statements match the current release documentation.
-- [ ] Homepage summary links to the full About page.
+- [x] Homepage About section links to the Nūr approach and feature overview.\n- [ ] Standalone About page is implemented and linked.
 - [ ] Copy is reviewed for clarity, accessibility and non-shaming language.
 - [ ] Any founder note, portrait, testimonial or third-party endorsement has explicit approval and appropriate rights.
 
 ---
 
-**Implementation boundary:** This document defines the About page's content and design direction only. It does not implement the website, establish a legal entity's public claims, or verify the completion of app features.
+**Implementation record (25 November 2026):** A homepage summary is implemented in `src/components/home/AboutPreview.astro` and integrated into `src/pages/index.astro`. It includes the purpose of Nūr, the six-stage guiding framework, product principles and an honest development-status note. No founder biography, portrait, team credentials, testimonials or impact claims were added. The full standalone About page remains pending. Build, browser, accessibility and device verification have not been completed.\n\n**Implementation boundary:** This document defines the approved brand story and content boundaries. It does not establish a legal entity's public claims or verify the completion of app features.
