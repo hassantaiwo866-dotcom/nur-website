@@ -1,0 +1,112 @@
+---
+const principles = [
+  { title: "Human agency", text: "You remain in charge of your choices, settings and direction." },
+  { title: "No shame", text: "A difficult moment is not a measure of your worth." },
+  { title: "Privacy by design", text: "Personal information should be handled carefully, with clear reasons and meaningful choices." },
+  { title: "Honest capability", text: "We distinguish what exists today from what is still being built." }
+];
+---
+<section id="about" class="about-section section" aria-labelledby="about-title">
+  <div class="container">
+    <div class="about-intro">
+      <div class="about-copy">
+        <p class="eyebrow">WHY NŪR EXISTS</p>
+        <h2 id="about-title" class="display-heading">Growth is bigger than what you are trying to stop.</h2>
+        <p class="about-lead">Nūr is being built to help you protect your attention, make intentional choices and keep moving forward after difficult moments. Not through shame or pressure, but with practical tools and more control over your own journey.</p>
+        <a class="about-link" href="#our-approach">Explore the Nūr approach <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="about-orbit" aria-hidden="true">
+        <span class="orbit orbit-outer"></span>
+        <span class="orbit orbit-middle"></span>
+        <span class="orbit orbit-inner"></span>
+        <span class="orbit-core">Nūr</span>
+      </div>
+    </div>
+
+    <div id="our-approach" class="about-approach">
+      <div class="approach-heading">
+        <p class="eyebrow">MORE THAN RESTRICTION</p>
+        <h3>Protection can create space. What you build in that space matters too.</h3>
+      </div>
+      <div class="approach-stages">
+        <article><span>01</span><h4>Protect</h4><p>Create stronger boundaries around your attention.</p></article>
+        <article><span>02</span><h4>Resist</h4><p>Make a deliberate choice when an unwanted pattern appears.</p></article>
+        <article><span>03</span><h4>Recover</h4><p>Take a constructive next step without shame.</p></article>
+        <article><span>04</span><h4>Rebuild</h4><p>Strengthen routines and habits that matter to you.</p></article>
+        <article><span>05</span><h4>Live</h4><p>Make room for meaningful work, relationships, faith and everyday life.</p></article>
+        <article><span>06</span><h4>Learn & adapt</h4><p>Reflect on what helps and adjust your approach.</p></article>
+      </div>
+      <p class="approach-note">This is Nūr's guiding product framework. It is not a claim that every stage is already available in the current app.</p>
+    </div>
+
+    <div class="about-principles">
+      <header>
+        <p class="eyebrow">THE PRINCIPLES WE BUILD BY</p>
+        <h3>Progress without punishment.</h3>
+        <p>A setback does not erase your worth. A tool designed to support self-control should not take control away from the person using it.</p>
+      </header>
+      <div class="principle-list">
+        {principles.map((principle, index) => (
+          <article class="principle-row">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <div><h4>{principle.title}</h4><p>{principle.text}</p></div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="about-closing">
+      <div>
+        <p class="eyebrow">STILL BEING BUILT</p>
+        <h3>We would rather earn trust through honest progress.</h3>
+        <p>Some foundations exist in the app; other parts remain in design, testing or planned work. We will be clear about what is available, what is limited and what has not yet been built.</p>
+      </div>
+      <a href="#features" class="about-link">Explore the features <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section { border-top: 1px solid var(--color-border); background: var(--color-bg); }
+  .about-intro { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(220px, .65fr); align-items: center; gap: 2rem; }
+  .about-copy { max-width: 790px; }
+  .about-copy h2 { margin: 1rem 0 1.2rem; font-size: clamp(2.5rem, 5.3vw, 4.5rem); }
+  .about-lead { max-width: 690px; color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.8; }
+  .about-link { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1rem; color: var(--color-accent); font-size: .9rem; font-weight: 700; text-decoration: none; }
+  .about-link:hover { text-decoration: underline; text-underline-offset: .25rem; }
+  .about-orbit { position: relative; display: grid; min-height: 270px; place-items: center; }
+  .orbit { position: absolute; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent); border-radius: 50%; }
+  .orbit-outer { width: 250px; }
+  .orbit-middle { width: 185px; border-color: color-mix(in srgb, var(--color-accent) 48%, transparent); }
+  .orbit-inner { width: 120px; border-color: color-mix(in srgb, var(--color-accent) 65%, transparent); box-shadow: 0 0 40px rgb(101 217 160 / 10%); }
+  .orbit-core { z-index: 1; display: grid; width: 76px; aspect-ratio: 1; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; background: var(--color-surface); color: var(--color-text); font-family: var(--font-display); font-size: 1.65rem; }
+  .about-approach { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+  .approach-heading { max-width: 690px; }
+  .approach-heading h3, .about-principles h3, .about-closing h3 { margin: .7rem 0; font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.2; }
+  .approach-stages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem 2rem; margin-top: 2rem; }
+  .approach-stages article { padding-top: 1rem; border-top: 1px solid var(--color-border); }
+  .approach-stages article > span, .principle-row > span { color: var(--color-accent); font-size: .7rem; font-weight: 700; letter-spacing: .12em; }
+  .approach-stages h4 { margin: .7rem 0 .35rem; font-family: var(--font-display); font-size: 1.45rem; font-weight: 400; }
+  .approach-stages p, .about-principles header > p:last-child, .principle-row p, .about-closing > div > p:last-child { margin: 0; color: var(--color-text-muted); font-size: .86rem; line-height: 1.7; }
+  .approach-note { margin: 1.5rem 0 0; color: var(--color-text-muted); font-size: .75rem; line-height: 1.6; }
+  .about-principles { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 3rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+  .about-principles header { max-width: 420px; }
+  .principle-list { display: grid; gap: 1.2rem; }
+  .principle-row { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); }
+  .principle-row h4 { margin: 0 0 .3rem; font-size: .95rem; }
+  .about-closing { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 3rem; padding: clamp(1.4rem, 4vw, 2.4rem); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); }
+  .about-closing > div { max-width: 650px; }
+  @media (max-width: 760px) {
+    .about-intro { grid-template-columns: 1fr; }
+    .about-orbit { min-height: 190px; }
+    .orbit-outer { width: 180px; }
+    .orbit-middle { width: 135px; }
+    .orbit-inner { width: 90px; }
+    .orbit-core { width: 60px; }
+    .about-approach, .about-principles { margin-top: 2.5rem; }
+    .approach-stages { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+    .about-principles { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-closing { align-items: flex-start; flex-direction: column; gap: .7rem; }
+  }
+  @media (max-width: 420px) { .approach-stages { grid-template-columns: 1fr; } }
+</style>
