@@ -3,9 +3,9 @@
 **Updated:** 25 November 2026  
 **Branch:** `feature/website-design-system`
 
-## Current milestone: homepage foundation
+## Current milestone: homepage sections
 
-The first source files have been added to the website branch. This is an initial implementation, not a verified release.
+The homepage foundation, Hold preview and seven-stage product-cycle section now exist in source control. This is implementation progress, not a verified release: the Astro build and browser behaviour have not yet been tested.
 
 ### Implemented in source control
 
@@ -16,7 +16,10 @@ The first source files have been added to the website branch. This is an initial
 - Skip link and shared site footer.
 - Responsive site header with desktop links and a native disclosure-based mobile menu.
 - Homepage hero with CSS-generated concentric light, emerald illumination and a subtle horizon arc.
-- Initial homepage sections introducing Nūr, its support areas and its user-controlled philosophy.\n- Interactive Hold demonstration with ready, running, complete and early-ended states; 10-second timer; restart and return actions; privacy boundary note.
+- Privacy-first interactive Hold demonstration with ready, running, complete and early-ended states; 10-second timer; restart and return actions; privacy boundary note.
+- Seven-stage Nūr approach section: PROTECT, RESIST, RECOVER, REBUILD, LIVE, LEARN and ADAPT.
+- Non-linear cycle framing, responsive cards, reduced-motion-compatible static presentation and explicit product-availability boundary.
+- Initial feature overview and user-controlled growth statement.
 - Reduced-motion handling, focus-visible styles and responsive layouts.
 
 ### Files added or updated
@@ -25,8 +28,12 @@ The first source files have been added to the website branch. This is an initial
 - `src/layouts/BaseLayout.astro`
 - `src/components/layout/SiteHeader.astro`
 - `src/components/home/HeroSection.astro`
-- `src/pages/index.astro`\n- `src/components/home/HoldDemo.astro`
+- `src/components/home/HoldDemo.astro`
+- `src/components/home/ProductLoop.astro`
+- `src/pages/index.astro`
 - `docs/COMPONENT_ARCHITECTURE.md`
+- `docs/HOW_NUR_WORKS_SPEC.md`
+- `docs/IMPLEMENTATION_PROGRESS.md`
 
 ### Deliberately not implemented yet
 
@@ -34,17 +41,17 @@ The first source files have been added to the website branch. This is an initial
 - Analytics, cookies, trackers or third-party scripts.
 - App screenshots or fabricated product UI.
 - Live protection, account or app-user integrations.
-- Additional Hold interaction verification, accessibility review and browser testing.
 - Full feature, privacy, FAQ, about, legal or support pages.
 - Hosting, domain configuration or public deployment.
 
-The hero currently directs visitors to the explanatory content rather than a non-functional alpha signup.
+The homepage uses explanatory navigation rather than a non-functional alpha signup. The product-cycle section explains the intended framework; it does not claim all seven stages are implemented app features.
 
 ## Verification status
 
 | Check | Status |
 |---|---|
-| GitHub source files created | Complete |\n| Hold demo source committed | Complete |
+| Homepage source committed to GitHub | Complete |
+| Product-cycle component committed | Complete |
 | Source files re-fetched from GitHub | Pending final verification |
 | Astro production build | Not run |
 | Type checking | Not run |
@@ -56,4 +63,4 @@ The hero currently directs visitors to the explanatory content rather than a non
 
 The pre-existing local Astro scaffold is still on the user's PC and has not yet been reconciled with this branch. Before merging or deploying, inspect its Git status, package files, Astro configuration, existing source files and tests. Preserve local work; do not reset or overwrite it.
 
-The source files on this branch are the initial implementation work to reconcile with that local scaffold. A successful build and browser review are required before describing the website as working.
+A successful build and browser review are required before describing the website as working.
