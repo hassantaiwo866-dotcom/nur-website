@@ -1,0 +1,70 @@
+---
+const limits = [
+  { number: "01", title: "Protection has technical limits", category: "NŪR SHIELD", text: "Filtering depends on your device, operating system, browser, network and supported traffic. Some routes or content may not be covered. Nūr cannot promise perfect or impossible-to-bypass blocking." },
+  { number: "02", title: "Your choices remain yours", category: "SELF-CONTROL", text: "Nūr can help you pause, reflect and plan a next step. It cannot make decisions for you, know your full circumstances or guarantee a particular habit or outcome." },
+  { number: "03", title: "A difficult moment is not a diagnosis", category: "RECOVERY", text: "Nūr is not a therapist, doctor, diagnostic tool or emergency service. Its activities are general self-support, not medical treatment. You do not owe the app an explanation for a setback." },
+  { number: "04", title: "Faith deserves qualified guidance", category: "OPTIONAL ISLAMIC MODE", text: "Islamic Mode is optional. Nūr does not issue fatwas or replace qualified scholars. For personal religious rulings, consult a knowledgeable and trusted religious authority." },
+  { number: "05", title: "Privacy is a practice, not an absolute guarantee", category: "PRIVACY & ACCOUNTABILITY", text: "We aim to minimise data and give you meaningful controls, but no connected service can promise perfect security. Another person’s trustworthiness cannot be guaranteed by an app." },
+  { number: "06", title: "Technology cannot replace human support", category: "AI & REAL LIFE", text: "Any AI suggestions, if introduced, may be inaccurate or unsuitable and should never be treated as a final authority. Nūr cannot replace trusted relationships, qualified professional care or emergency help." }
+];
+---
+<section id="limits" class="limits-section section" aria-labelledby="limits-title">
+  <div class="container">
+    <header class="limits-heading">
+      <p class="eyebrow">HONEST BY DESIGN</p>
+      <h2 id="limits-title" class="display-heading">Nūr can support your choices. It cannot make them for you.</h2>
+      <p>Nūr is designed to help you protect your attention, pause before acting, recover after difficult moments and build more intentional routines. It can offer structure and support—but it cannot guarantee outcomes or take the place of your own judgement.</p>
+    </header>
+
+    <div class="limits-grid">
+      {limits.map((limit) => (
+        <article class="limit-card">
+          <div class="limit-topline">
+            <span class="limit-number">{limit.number}</span>
+            <span class="limit-category">{limit.category}</span>
+          </div>
+          <h3>{limit.title}</h3>
+          <p>{limit.text}</p>
+        </article>
+      ))}
+    </div>
+
+    <aside class="support-note" aria-label="When you need more support">
+      <div>
+        <p class="eyebrow">WHEN YOU NEED MORE SUPPORT</p>
+        <h3>You do not have to handle everything through an app.</h3>
+        <p>If you feel unsafe, are in immediate danger or need support beyond what Nūr can provide, contact a trusted person, a qualified professional or local emergency services.</p>
+      </div>
+      <span class="support-symbol" aria-hidden="true">↗</span>
+    </aside>
+
+    <p class="limits-footnote">These boundaries describe the product's intended role. Technical coverage and feature availability must be checked against each release; a design or source-code review is not a guarantee of real-world performance.</p>
+  </div>
+</section>
+
+<style>
+  .limits-section { border-top: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-surface) 26%, var(--color-bg)); }
+  .limits-heading { max-width: 850px; }
+  .limits-heading h2 { margin: 1rem 0 1.1rem; font-size: clamp(2.35rem, 5vw, 4.15rem); }
+  .limits-heading > p:last-child { max-width: 720px; margin: 0; color: var(--color-text-muted); font-size: 1rem; line-height: 1.75; }
+  .limits-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; }
+  .limit-card { min-height: 220px; padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); }
+  .limit-topline { display: flex; align-items: center; justify-content: space-between; gap: .8rem; }
+  .limit-number { color: var(--color-accent); font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
+  .limit-category { color: var(--color-text-muted); font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-align: right; }
+  .limit-card h3 { max-width: 420px; margin: 1.5rem 0 .65rem; font-family: var(--font-display); font-size: 1.55rem; font-weight: 400; line-height: 1.2; }
+  .limit-card p { margin: 0; color: var(--color-text-muted); font-size: .86rem; line-height: 1.7; }
+  .support-note { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 1.2rem; padding: clamp(1.4rem, 4vw, 2.4rem); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-bg); }
+  .support-note > div { max-width: 680px; }
+  .support-note h3 { margin: .7rem 0 .5rem; font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.2; }
+  .support-note > div > p:last-child { margin: 0; color: var(--color-text-muted); font-size: .88rem; line-height: 1.7; }
+  .support-symbol { display: grid; width: 3rem; aspect-ratio: 1; flex: 0 0 auto; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; color: var(--color-accent); font-size: 1.4rem; }
+  .limits-footnote { max-width: 850px; margin: 1.5rem 0 0; color: var(--color-text-muted); font-size: .75rem; line-height: 1.65; }
+  @media (max-width: 680px) {
+    .limits-grid { grid-template-columns: 1fr; gap: .8rem; margin-top: 2rem; }
+    .limit-card { min-height: 0; padding: 1.25rem; }
+    .limit-card h3 { margin-top: 1rem; }
+    .support-note { gap: 1rem; }
+    .support-symbol { width: 2.5rem; }
+  }
+</style>
