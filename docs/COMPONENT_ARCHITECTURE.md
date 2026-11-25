@@ -1,6 +1,6 @@
 # Nūr Website — Component Architecture Specification
 
-**Status:** Architecture specification; initial homepage foundation, product-cycle section and feature grid implemented in source control; verification pending
+**Status:** Architecture specification; initial homepage foundation, product-cycle section, feature grid and Privacy & Trust section implemented in source control; verification pending
 **Date:** 25 November 2026
 **Repository:** `hassantaiwo866-dotcom/nur-website`
 **Working branch:** `feature/website-design-system`
@@ -13,7 +13,7 @@
 
 Define reusable Astro components, layouts, page composition, styling boundaries and interaction ownership before implementation.
 
-This document began as a component architecture specification. Initial Astro page, layout, header, hero, Hold demo, product-cycle section, feature grid and global stylesheet files have since been added on this branch. The existing local Astro scaffold still must be inspected and reconciled before these files are merged into the local working copy or deployed.
+This document began as a component architecture specification. Initial Astro page, layout, header, hero, Hold demo, product-cycle section, feature grid, Privacy & Trust section and global stylesheet files have since been added on this branch. The existing local Astro scaffold still must be inspected and reconciled before these files are merged into the local working copy or deployed.
 
 ## 2. Architecture principles
 
@@ -55,7 +55,7 @@ nur-website/
 │   │   ├── home/
 │   │   │   ├── HeroSection.astro
 │   │   │   ├── HoldDemo.astro
-│   │   │   ├── ProductLoop.astro\n│   │   │   ├── FeatureGrid.astro
+│   │   │   ├── ProductLoop.astro\n│   │   │   ├── FeatureGrid.astro\n│   │   │   ├── PrivacyTrust.astro
 │   │   │   ├── FeatureGrid.astro
 │   │   │   ├── ProductPreview.astro
 │   │   │   ├── TrustPreview.astro
