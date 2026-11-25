@@ -1,6 +1,6 @@
 # Nūr Website — Information Architecture & Navigation Specification
 
-**Status:** Architecture specification; homepage core sections, closed-alpha status callout and responsive footer implemented in source control; verification pending
+**Status:** Architecture specification; homepage core sections, closed-alpha status callout, responsive footer and standalone How Nūr Works page implemented in source control; verification pending
 **Date:** 25 November 2026
 **Repository:** `hassantaiwo866-dotcom/nur-website`
 **Working branch:** `feature/website-design-system`
@@ -13,7 +13,7 @@
 
 This document defines the public website's page structure, navigation, URL conventions, user journeys and implementation order. It consolidates the existing design, feature, privacy, FAQ, About and closed-alpha specifications into one navigable site.
 
-This remains the information-architecture reference. Selected homepage components are now implemented; secondary routes, legal pages, support services and backend services remain pending.
+This remains the information-architecture reference. The homepage and standalone How Nūr Works route are implemented in source control; other secondary routes, legal pages, support services and backend services remain pending.
 
 ## 2. Site goals and priority
 
@@ -80,7 +80,7 @@ Use lowercase, short, readable paths. Keep the brand spelling Nūr in visible co
 | Page | Proposed path | Launch priority | Purpose |
 |---|---|---|---|
 | Home | `/` | Phase 1 | Explain Nūr and direct visitors |
-| How it works | `/how-it-works/` | Phase 1 | Explain the product cycle |
+| How it works | `/how-it-works/` | Phase 1 | Explain the product cycle — implemented in source control; verification pending |
 | Features | `/features/` | Phase 1 | Present verified feature foundations and boundaries |
 | Privacy & Trust | `/privacy/` | Phase 1 | Explain data principles and verified behaviour |
 | What Nūr Cannot Do | `/limitations/` | Phase 1 | Set honest capability boundaries |
@@ -225,7 +225,7 @@ Follow `docs/DESIGN_SYSTEM.md`:
 
 ## 12. Recommended implementation sequence
 
-Build in controlled increments, keeping the existing local Astro project as the intended implementation base. The GitHub branch currently contains documentation only; it does not yet contain the Astro scaffold.
+Build in controlled increments, keeping the existing local Astro project as the intended implementation base. The GitHub branch now contains initial Astro page and component source, but the user's existing local Astro scaffold and dependency files still need careful reconciliation.
 
 **Stage 0 — reconcile project source**
 1. When the user's PC is available, inspect the local Astro project and Git status.
@@ -310,3 +310,10 @@ The shared layout footer now groups links into:
 Every footer destination currently points to an existing homepage section. Legal, contact, data-request and social links are intentionally omitted because no verified destination or operational process has been established.
 
 The Astro build, browser rendering, accessibility and device checks remain pending.
+
+
+## 15. How Nūr Works route implementation record
+
+`src/pages/how-it-works.astro` now implements the Phase 1 `/how-it-works/` route. The page explains the seven-part cycle, its non-linear nature, the distinction between product philosophy and current app capabilities, and the optional status of Islamic Mode.
+
+The shared navigation points to this route. Footer and homepage-section links are root-relative to remain valid when a visitor is on a secondary route. The page has not yet passed a production build or browser/device review.
