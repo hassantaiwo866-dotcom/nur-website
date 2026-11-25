@@ -11,7 +11,8 @@ Initial homepage sections, shared layout source and the standalone How Nūr Work
 
 - Global CSS tokens for the approved forest-green identity and system-preference themes.
 - Shared Astro document layout, metadata defaults, skip link, header and responsive footer.
-- Responsive navigation and homepage hero with CSS-generated concentric light, emerald illumination and horizon arc.\n- Standalone `/how-it-works/` page with seven-stage cycle visual, detailed explanations, reflective prompts and explicit product boundaries.
+- Responsive navigation and homepage hero with CSS-generated concentric light, emerald illumination and horizon arc.
+- Standalone `/how-it-works/` page with seven-stage cycle visual, detailed explanations, reflective prompts and explicit product boundaries.
 - Privacy-first interactive Hold demonstration with ready, running, complete and early-ended states.
 - Seven-stage product philosophy section: PROTECT, RESIST, RECOVER, REBUILD, LIVE, LEARN and ADAPT.
 - Six-card feature grid: Nūr Shield, Focus, Reset & Recovery, Insights & Growth, Accountability and optional Islamic Mode.
@@ -38,7 +39,8 @@ Initial homepage sections, shared layout source and the standalone How Nūr Work
 - `src/components/home/AboutPreview.astro`
 - `src/components/home/FAQPreview.astro`
 - `src/components/home/AlphaCallout.astro`
-- `src/pages/index.astro`\n- `src/pages/how-it-works.astro`
+- `src/pages/index.astro`
+- `src/pages/how-it-works.astro`
 
 ### Documentation updated
 
@@ -67,7 +69,9 @@ Initial homepage sections, shared layout source and the standalone How Nūr Work
 
 | Check | Status |
 |---|---|
-| Homepage sections committed | Complete |\n| Standalone How Nūr Works page committed | Complete |\n| Shared navigation and footer secondary-route links updated | Complete |
+| Homepage sections committed | Complete |
+| Standalone How Nūr Works page committed | Complete |
+| Shared navigation and footer secondary-route links updated | Complete |
 | Closed-alpha status callout committed | Complete |
 | Responsive footer source committed | Complete |
 | Footer and CTA destinations checked against current homepage IDs | Complete (source review) |
